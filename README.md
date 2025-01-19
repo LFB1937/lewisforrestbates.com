@@ -1,4 +1,4 @@
-# LewisForrestBates.com
+# Lewis Forrest Bates Personal Website
 
 Welcome to the personal website of Lewis Forrest Bates, hosted on GitHub Pages. This site showcases my work, interests, and provides a way to get in touch.
 
