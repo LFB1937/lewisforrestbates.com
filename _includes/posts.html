@@ -4,7 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Sermons & Devos | LewisForrestBates</title>
+<style>
+img {
+  width: 650px;
+  height: 400px;
+}
+</style>
+    <title>{{ title | default: "LewisForrestBates" }}</title>
   </head>
   <nav class="myNav">
     <ul>
@@ -22,28 +28,8 @@
         </li>
     </ul>
   </nav>
-    <!--nav class="myNav">
-      <ul>
-        <li>
-          <a href="/index.html" class="text-style">Home</a>
-        </li>
-        <li>
-          <a href="/pages/about.html" class="text-style">About</a>
-        </li>
-        <li>
-          <a href="/pages/Sermons&Devos.html" class="text-style">Sermons & Devos</a>
-        </li>
-        <li>
-          <a href="/pages/resume_export.html" class="text-style">Resume</a>
-        </li>
-      </ul>
-    </nav-->
   <body>
-    <main>
-<h1>Sermons & Devos | LewisForrestBates</h1>
-<h2><a href="/posts/2025/test_post/">Test Post</a></h2>
-
-</main>
+    <main>{{ content }}</main>
   </body>
   <footer>
     <h6>
@@ -51,4 +37,3 @@
     </h6>
   </footer>
 </html>
-
