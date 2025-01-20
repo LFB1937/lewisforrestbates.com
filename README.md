@@ -34,8 +34,8 @@ This website serves as a personal portfolio and blog, featuring sections on my b
 To run this website locally:
 
 1. Clone the repository:
-   ```bash   git clone https://github.com/LFB1937/LewisForrestBates.com.git
-
+   ```bash
+   git clone https://github.com/LFB1937/LewisForrestBates.com.git
    ```
 2. Navigate to the project directory:
    ```bash
