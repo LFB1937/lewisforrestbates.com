@@ -1,6 +1,6 @@
 module.exports = function (eleventyConfig) {
     // Copy `img/` to `_site/img`
-    eleventyConfig.addPassthroughCopy("Images");
+    eleventyConfig.addPassthroughCopy("img");
     eleventyConfig.addPassthroughCopy("css");
   
     eleventyConfig.addCollection("posts", function (collection) {
