@@ -1,0 +1,15 @@
+module.exports = function (eleventyConfig) {
+    // Copy `img/` to `_site/img`
+    eleventyConfig.addPassthroughCopy("Images");
+    eleventyConfig.addPassthroughCopy("css");
+  
+    eleventyConfig.addCollection("posts", function (collection) {
+      return collection.getFilteredByGlob("posts/**/*.md");
+    });
+    return {
+      dir: {
+        output: "docs",
+      },
+    };
+  };
+  
