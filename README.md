@@ -27,7 +27,7 @@ This website serves as a personal portfolio and blog, featuring sections on my b
 - **HTML5**: For structuring the content.
 - **CSS3**: For styling the website.
 - **11ty**: Static site generator used to build the site.
-- **Three.js**: For any 3D graphics and animations.
+
 
 ## Setup
 
