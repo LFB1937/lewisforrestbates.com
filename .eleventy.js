@@ -1,15 +1,12 @@
 module.exports = function (eleventyConfig) {
-    // Copy `img/` to `_site/img`
-    eleventyConfig.addPassthroughCopy("img");
-    eleventyConfig.addPassthroughCopy("css");
-  
-    eleventyConfig.addCollection("posts", function (collection) {
-      return collection.getFilteredByGlob("posts/**/*.md");
-    });
-    return {
-      dir: {
-        output: "docs",
-      },
-    };
+  // Pass through the folders we actually need
+  eleventyConfig.addPassthroughCopy("img");
+  eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("css");
+
+  return {
+    dir: {
+      output: "docs",
+    },
   };
-  
+};
