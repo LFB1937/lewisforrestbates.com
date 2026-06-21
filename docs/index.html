@@ -1,44 +1,379 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>LewisForrestBates</title>
-  </head>
-  <nav class="myNav">
-    <ul>
-      <li>
-        <a href="/" class="text-style">Home</a>
-      </li>
-      <li>
-        <a href="/pages/about/index.html" class="text-style">About</a>
-      </li>
-      <li>
-        <a href="/pages/Sermons&Devos/index.html" class="text-style">Sermons & Devos</a>
-        </li>
-        <li>
-        <a href="/pages/resume_export/index.html" class="text-style">Resume</a>
-        </li>
-    </ul>
-  </nav>
-  
-  <body>
-    <main><h1>Lewis Forrest Bates</h1>
-<div class="profile">
-  <img class="profileImage" src="/img/LewisForrestBates_Headshot_3x2.jpg" alt="Profile Picture" />
-</div>
-<p>Good Morning! My Name is Lewis Forrest Bates.</p>
-<h2 class="about">About</h2>
-<p>
-  I’m a Computer and Electrical Engineering Student at Tennessee Technological University.
-</p>
-</main>
-  </body>
-  <footer>
-    <h6>
-      Copyright &copy; 2026 <i>Lewis Forrest Bates.</i> Made with <a href="https://www.11ty.dev/">11ty</a>
-    </h6>
-  </footer>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lewis Forrest Bates | Embedded Systems & Hardware Security Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --red-accent: #C8102E;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 600;
+        }
 
+        .section-header {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #C8102E, #9f0d24);
+            border-radius: 3px;
+        }
+
+        .tech-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .nav-link {
+            transition: all 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #C8102E;
+            transform: translateY(-1px);
+        }
+
+        .metric {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .red-accent {
+            color: #C8102E;
+        }
+
+        .dark-bg {
+            background-color: #0f0f0f;
+        }
+
+        .professional-shadow {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-zinc-950/95 backdrop-blur-md border-b border-zinc-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 bg-[#C8102E] rounded-xl flex items-center justify-center">
+                    <span class="text-white font-bold text-xl tracking-tighter">LB</span>
+                </div>
+                <div>
+                    <div class="font-semibold text-xl tracking-tight">Lewis Forrest Bates</div>
+                    <div class="text-[10px] text-zinc-500 -mt-1">B.S. ECE • Embedded &amp; Hardware Security</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-x-8 text-sm">
+                <a href="sermons.html" class="nav-link text-zinc-400 hover:text-white font-medium">Sermons</a>
+                <a href="#about" class="nav-link text-zinc-400 hover:text-white font-medium">About</a>
+                <a href="#experience" class="nav-link text-zinc-400 hover:text-white font-medium">Experience</a>
+                <a href="#projects" class="nav-link text-zinc-400 hover:text-white font-medium">Projects</a>
+                <a href="#skills" class="nav-link text-zinc-400 hover:text-white font-medium">Skills</a>
+                <div class="flex items-center gap-x-3">
+                    <a href="Lewis_Bates_Resume_June_2026.pdf" 
+                       class="px-5 py-2 bg-white text-zinc-950 text-sm font-semibold rounded-2xl hover:bg-zinc-100 transition-colors flex items-center gap-x-2">
+                        <i class="fa-solid fa-download text-xs"></i>
+                        <span>Resume</span>
+                    </a>
+                    <a href="https://github.com/LFB1937" target="_blank" 
+                       class="w-9 h-9 flex items-center justify-center text-zinc-400 hover:text-white transition-colors">
+                        <i class="fa-brands fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lewis-bates-00b980201/" target="_blank" 
+                       class="w-9 h-9 flex items-center justify-center text-zinc-400 hover:text-white transition-colors">
+                        <i class="fa-brands fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="max-w-6xl mx-auto px-6 pt-16 pb-12">
+        <div class="grid md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-7">
+                <div class="inline-flex items-center gap-x-2 px-4 py-1.5 bg-zinc-900 border border-zinc-800 rounded-3xl mb-6">
+                    <span class="text-zinc-400 text-sm font-medium tracking-wider">EMBEDDED SYSTEMS &amp; HARDWARE SECURITY ENGINEER</span>
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-semibold tracking-tighter heading-font leading-none mb-4">
+                    Lewis Forrest<br>Bates
+                </h1>
+                
+                <p class="max-w-md text-2xl text-zinc-400 font-light tracking-tight mb-8">
+                    Embedded Systems &amp; Hardware Security Engineer
+                </p>
+                
+                <div class="flex flex-wrap gap-3">
+                    <a href="#experience" 
+                       class="inline-flex items-center justify-center px-8 h-12 bg-[#C8102E] hover:bg-[#9f0d24] transition-all text-white font-semibold rounded-3xl text-sm tracking-wider">
+                        VIEW EXPERIENCE
+                    </a>
+                    <a href="https://github.com/LFB1937" target="_blank"
+                       class="inline-flex items-center justify-center px-8 h-12 border border-zinc-700 hover:bg-zinc-900 transition-all text-white font-medium rounded-3xl text-sm tracking-wider gap-x-2">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GITHUB</span>
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-x-4 mt-8 text-sm text-zinc-500">
+                    <div class="flex items-center gap-x-1.5">
+                        <i class="fa-solid fa-map-marker-alt"></i>
+                        <span>Cookeville, TN</span>
+                    </div>
+                    <div class="w-px h-3 bg-zinc-700"></div>
+                    <div>B.S. ECE, Tennessee Tech • May 2026</div>
+                </div>
+            </div>
+            
+            <!-- Professional Photo Placeholder / Suggestion -->
+            <div class="md:col-span-5">
+                <div class="relative mx-auto max-w-[280px] md:max-w-none">
+                    <div class="aspect-[4/3] bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden professional-shadow">
+                        <!-- Headshot: Place your updated professional headshot at assets/headshot.jpg -->
+                        <img src="assets/headshot.jpg" alt="Lewis Forrest Bates - Professional Headshot" 
+                             class="w-full h-full object-cover" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-950 flex items-center justify-center\'><div class=\'text-center\'><i class=\'fa-solid fa-user text-6xl text-zinc-700 mb-3\'></i><div class=\'text-xs text-zinc-500 tracking-widest\'>PROFESSIONAL HEADSHOT</div><div class=\'text-[10px] text-zinc-600 mt-1\'>assets/headshot.jpg</div></div></div>';">
+                    </div>
+                    <div class="absolute -bottom-2 -right-2 bg-[#C8102E] text-white text-[10px] font-mono px-3 py-1 rounded-2xl tracking-[1.5px] shadow-lg">
+                        KQ4SNV
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Stats / Trust Bar -->
+    <div class="border-y border-zinc-800 bg-zinc-900/50 py-5">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-y-6 text-center text-sm">
+            <div>
+                <div class="font-mono text-3xl font-semibold text-white tracking-tighter">13th</div>
+                <div class="text-zinc-500 text-xs tracking-widest mt-0.5">INTERNATIONAL eCTF 2024</div>
+            </div>
+            <div>
+                <div class="font-mono text-3xl font-semibold text-white tracking-tighter">TEAM LEAD</div>
+                <div class="text-zinc-500 text-xs tracking-widest mt-0.5">eCTF 2026 + HCIG FOUNDER</div>
+            </div>
+            <div>
+                <div class="font-mono text-3xl font-semibold text-white tracking-tighter">HIGHEST</div>
+                <div class="text-zinc-500 text-xs tracking-widest mt-0.5">TECHNICAL RIGOR AWARD — CAPSTONE</div>
+            </div>
+            <div>
+                <div class="font-mono text-3xl font-semibold text-white tracking-tighter">HIL + RTAC</div>
+                <div class="text-zinc-500 text-xs tracking-widest mt-0.5">MICROGRID RESEARCH &amp; ML EDGE</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sermons link is now on its own dedicated page: sermons.html -->
+
+    <!-- About Section -->
+    <div id="about" class="max-w-6xl mx-auto px-6 pt-16 pb-12">
+        <div class="max-w-3xl">
+            <div class="uppercase tracking-[3px] text-xs font-semibold text-[#C8102E] mb-3">ABOUT ME</div>
+            <h2 class="text-4xl font-semibold tracking-tighter heading-font mb-6">Engineer. Leader. Builder.</h2>
+            
+            <div class="prose prose-invert max-w-none text-[15px] text-zinc-300 leading-relaxed">
+                <p>I am a recently graduated Electrical &amp; Computer Engineer from Tennessee Technological University with deep hands-on experience in <strong>embedded systems</strong>, <strong>hardware security</strong>, and <strong>power electronics / microgrids</strong>.</p>
+                
+                <p class="mt-4">My work spans national hardware security competitions (MITRE eCTF — where I served as Team Lead and founded the HCIG), real-time HIL simulation with Typhoon platforms, and research integrating RTAC-like control logic + neural networks on industrial Raspberry Pi for microgrid applications.</p>
+                
+                <p class="mt-4">I bring a unique combination of technical rigor (Highest Technical Rigor Capstone award), leadership (mentoring eCTF teams and founding interest groups), and a long-term vision to launch my own engineering ventures that combine cutting-edge technology with meaningful impact.</p>
+            </div>
+            
+            <div class="mt-8 flex flex-wrap gap-2">
+                <div class="px-4 py-1.5 text-xs border border-zinc-700 rounded-2xl flex items-center gap-x-2">
+                    <i class="fa-solid fa-shield-halved text-[#C8102E]"></i>
+                    <span class="font-medium">Hardware Security</span>
+                </div>
+                <div class="px-4 py-1.5 text-xs border border-zinc-700 rounded-2xl flex items-center gap-x-2">
+                    <i class="fa-solid fa-microchip text-[#C8102E]"></i>
+                    <span class="font-medium">Embedded Systems</span>
+                </div>
+                <div class="px-4 py-1.5 text-xs border border-zinc-700 rounded-2xl flex items-center gap-x-2">
+                    <i class="fa-solid fa-bolt-lightning text-[#C8102E]"></i>
+                    <span class="font-medium">Power &amp; HIL</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience -->
+    <div id="experience" class="bg-zinc-900 py-16 border-y border-zinc-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="uppercase tracking-[3px] text-xs font-semibold text-[#C8102E] mb-3">EXPERIENCE</div>
+            <h2 class="text-4xl font-semibold tracking-tighter heading-font mb-10">Professional Experience</h2>
+            
+            <div class="space-y-10">
+                <!-- CESR -->
+                <div class="grid md:grid-cols-12 gap-x-8">
+                    <div class="md:col-span-4">
+                        <div class="sticky top-24">
+                            <div class="font-semibold text-lg">R&amp;D Staff Engineer /<br>Undergraduate Assistant Engineer</div>
+                            <div class="text-[#C8102E] text-sm mt-1">Center for Energy Systems Research (CESR)</div>
+                            <div class="text-xs text-zinc-500 mt-1">Tennessee Tech • Oct 2024 – Present (Part-Time → R&amp;D)</div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-8 mt-4 md:mt-0">
+                        <ul class="space-y-3 text-sm text-zinc-300">
+                            <li class="flex gap-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-[#C8102E] flex-shrink-0"></span> Led integration of CESR RTAC-like functionality and ML-enabled control onto industrial Raspberry Pi boards for microgrid applications (islanding detection, energy forecasting).</li>
+                            <li class="flex gap-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-[#C8102E] flex-shrink-0"></span> Implemented on-device structured text control logic, Modbus gateways, time sync, alarms, secure access, and neural net deployment (tested pure ST and hybrid approaches).</li>
+                            <li class="flex gap-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-[#C8102E] flex-shrink-0"></span> Validated systems in standalone and RTAC-coupled Typhoon HIL environments; scaled concepts to multi-microgrid setups. Contributed to technical reports and publications.</li>
+                            <li class="flex gap-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-[#C8102E] flex-shrink-0"></span> Collaborated with Typhoon engineers; supported research teams and maintained lab infrastructure.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- CEROC -->
+                <div class="grid md:grid-cols-12 gap-x-8 pt-8 border-t border-zinc-800">
+                    <div class="md:col-span-4">
+                        <div class="sticky top-24">
+                            <div class="font-semibold text-lg">Hardware Security R&amp;D / Staff Engineer</div>
+                            <div class="text-[#C8102E] text-sm mt-1">Cybersecurity Education, Research &amp; Outreach Center (CEROC)</div>
+                            <div class="text-xs text-zinc-500 mt-1">Tennessee Tech • 2024 – Present</div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-8 mt-4 md:mt-0">
+                        <ul class="space-y-3 text-sm text-zinc-300">
+                            <li class="flex gap-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-[#C8102E] flex-shrink-0"></span> Developed hands-on instructional materials for hardware security and OT security using CEROC testbeds and lab environments.</li>
+                            <li class="flex gap-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-[#C8102E] flex-shrink-0"></span> Mentored hardware security interest groups, student clubs, and eCTF competition teams; coordinated national training activities.</li>
+                            <li class="flex gap-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-[#C8102E] flex-shrink-0"></span> Designed outreach materials and supported research in hardware security &amp; cyber-physical systems.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Projects & Leadership -->
+    <div id="projects" class="max-w-6xl mx-auto px-6 pt-16 pb-12">
+        <div class="uppercase tracking-[3px] text-xs font-semibold text-[#C8102E] mb-3">KEY PROJECTS &amp; LEADERSHIP</div>
+        <h2 class="text-4xl font-semibold tracking-tighter heading-font mb-10">Impact &amp; Recognition</h2>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- eCTF Card -->
+            <div class="tech-card bg-zinc-900 border border-zinc-800 rounded-3xl p-7">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <div class="uppercase text-xs tracking-[2px] text-[#C8102E] font-semibold">NATIONAL COMPETITION</div>
+                        <div class="text-2xl font-semibold tracking-tight mt-1">MITRE eCTF</div>
+                        <div class="text-sm text-zinc-400">Hardware Engineer / Team Lead • 2024–2026</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-emerald-400 text-xs font-mono">3 SEASONS</div>
+                        <div class="text-xs text-zinc-500">13th / 33rd / 19th Place</div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 text-sm text-zinc-300 space-y-2">
+                    <div><strong>2026 (Team Lead):</strong> Led team to 19th place out of 114 teams internationally. Founded HCIG (Hardware Cyber Interest Group) — collaborated with faculty/staff to build sustainable hardware security talent pipeline for eCTF.</div>
+                    <div><strong>2025:</strong> Satellite TV encoding/decoding with access control security.</div>
+                    <div><strong>2024:</strong> Medical device microcontroller security fixes &amp; I²C vulnerability analysis (13th of 76 teams).</div>
+                </div>
+            </div>
+            
+            <!-- Capstone Card -->
+            <div class="tech-card bg-zinc-900 border border-zinc-800 rounded-3xl p-7">
+                <div>
+                    <div class="uppercase text-xs tracking-[2px] text-[#C8102E] font-semibold">CAPSTONE • AWARD WINNING</div>
+                    <div class="text-2xl font-semibold tracking-tight mt-1">Automated Chessboard</div>
+                    <div class="text-sm text-zinc-400">F25_Team2 • TN Tech ECE</div>
+                </div>
+                
+                <div class="mt-5">
+                    <div class="inline-flex items-center gap-x-2 px-3 py-1 bg-emerald-950 text-emerald-400 text-xs font-medium rounded-2xl">
+                        <i class="fa-solid fa-trophy"></i>
+                        <span>HIGHEST TECHNICAL RIGOR AWARD</span>
+                    </div>
+                    <div class="text-xs text-emerald-400/70 mt-1">ECE Industrial Advisory Board</div>
+                </div>
+                
+                <div class="mt-6 text-sm text-zinc-300">
+                    <strong>Power Subsystem Lead</strong> — Designed &amp; validated full power architecture (thermal, UPS, battery, ripple/safety). Led key experiments with data analysis. Full system: CV + robotics + embedded control.
+                    <div class="mt-3 text-xs text-zinc-500">GitHub: TnTech-ECE/F25_Team2_AutomatedChessBoard</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div id="skills" class="bg-zinc-900 border-y border-zinc-800 py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="uppercase tracking-[3px] text-xs font-semibold text-[#C8102E] mb-3">EXPERTISE</div>
+            <h2 class="text-4xl font-semibold tracking-tighter heading-font mb-8">Technical Skills</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6 text-sm">
+                <div>
+                    <div class="font-semibold text-[#C8102E] mb-3 tracking-wider text-xs">LANGUAGES &amp; EMBEDDED</div>
+                    <div class="text-zinc-300">C/C++ • Python • VHDL • ARM Assembly • Structured Text (IEC 61131-3) • Real-time Control</div>
+                </div>
+                <div>
+                    <div class="font-semibold text-[#C8102E] mb-3 tracking-wider text-xs">HARDWARE &amp; PLATFORMS</div>
+                    <div class="text-zinc-300">Raspberry Pi (industrial) • Typhoon HIL + RTAC + PYTAC • Modbus • DE10-Lite FPGA • STM32 • MAX78000FTHR • ChipWhisperer</div>
+                </div>
+                <div>
+                    <div class="font-semibold text-[#C8102E] mb-3 tracking-wider text-xs">DOMAINS &amp; TOOLS</div>
+                    <div class="text-zinc-300">Hardware Security (eCTF) • Microgrids &amp; Power Electronics • Neural Net Edge Deployment • HIL Simulation • Git/Docker • Quartus/ModelSim</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer / CTA -->
+    <div class="max-w-6xl mx-auto px-6 py-16 text-center">
+        <div class="max-w-md mx-auto">
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="Lewis_Bates_Resume_June_2026.pdf" class="flex-1 sm:flex-none px-8 h-12 bg-white hover:bg-zinc-100 transition-colors text-zinc-950 font-semibold rounded-3xl flex items-center justify-center gap-x-2 text-sm">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>DOWNLOAD RESUME (PDF)</span>
+                </a>
+                <a href="mailto:lewisforrestbates@hotmail.com" class="flex-1 sm:flex-none px-8 h-12 border border-zinc-700 hover:bg-zinc-900 transition-colors font-medium rounded-3xl flex items-center justify-center gap-x-2 text-sm">
+                    <span>CONTACT ME</span>
+                </a>
+            </div>
+            
+            <div class="mt-8 text-[10px] text-zinc-600 tracking-widest">COOKVILLE, TN • KQ4SNV</div>
+        </div>
+    </div>
+
+    <script>
+        // Simple smooth scroll for nav
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Tailwind script for any dynamic classes if needed
+        console.log('%c[Website] Professional red-accent dark theme loaded. Ready for headshot + real images.', 'color:#666');
+    </script>
+</body>
+</html>
