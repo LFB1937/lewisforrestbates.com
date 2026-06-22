@@ -2,27 +2,27 @@ name: Eleventy Build
 
 on:
   push:
-    branches:
-      - main          # Changed from master
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4   # Updated to v4
+      - uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'        # Modern Node
+          node-version: 20
+          cache: 'npm'
 
       - run: npm ci
 
       - run: npm run build
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4   # Updated
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}   # Prefer this over PERSONAL_TOKEN
-          publish_dir: ./docs                       # <-- THIS WAS THE MAIN PROBLEM
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
